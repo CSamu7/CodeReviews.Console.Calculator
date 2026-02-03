@@ -2,7 +2,7 @@
 {
     public class CalculatorConsole
     {
-        private readonly List<double> _lastCalculations = [0];
+        private readonly List<double> _lastCalculations = [];
         private readonly Operation _operation = new Operation();
         private bool _endApp = false;
         private int _timesUsed = 0;

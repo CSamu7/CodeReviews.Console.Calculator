@@ -28,9 +28,11 @@
         }
         public double GetFirstNumber(List<double> lastCalculations)
         {
-            Console.WriteLine("Do you want to use the last result? {0:0.####} (y/n)", lastCalculations.Last());
+            double lastCalculation = lastCalculations.Count > 0 ? lastCalculations.Last() : 0;
+
+            Console.WriteLine("Do you want to use the last result? {0:0.####} (y/n)", lastCalculation);
             bool useLastCalculation = IsLastCalculationUsed();
-            double cleanNum1 = useLastCalculation ? lastCalculations.Last() : 0;
+            double cleanNum1 = lastCalculation;
 
             if (!useLastCalculation)
             {
